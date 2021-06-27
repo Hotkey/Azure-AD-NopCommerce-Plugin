@@ -1,3 +1,5 @@
+![logo](https://user-images.githubusercontent.com/1449423/123538638-a28c9b00-d73e-11eb-9204-532cb472cf21.png)
+
 # Azure AD NopCommerce Plugin
  Azure AD External Authentication Plugin for NopCommerce
 
