@@ -1,5 +1,5 @@
 # Azure AD NopCommerce Plugin
- Azure AD NopCommerce Plugin
+ Azure AD External Authentication Plugin for NopCommerce
 
 # Properties
 
