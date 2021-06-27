@@ -1,0 +1,97 @@
+﻿@model Nop.Plugin.ExternalAuth.AzureAD.Models.ConfigurationModel
+
+@inject Nop.Core.IWebHelper webHelper
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="AzureADAuthentication" asp-action="Configure" method="post">
+	<section class="content">
+		<div class="container-fluid">			
+				<div class="card card-default">
+                    <div class="card-body">
+                        @Html.Raw(string.Format(T("Plugins.ExternalAuth.AzureAD.Instructions").Text, webHelper.GetStoreLocation()))
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Instance" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Instance" />
+                                <span asp-validation-for="Instance"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Authority" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Authority" />
+                                <span asp-validation-for="Authority"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Domain" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Domain" />
+                                <span asp-validation-for="Domain"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ClientId" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ClientId" />
+                                <span asp-validation-for="ClientId"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="TenantId" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="TenantId" />
+                                <span asp-validation-for="TenantId"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="CallbackPath" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="CallbackPath" />
+                                <span asp-validation-for="CallbackPath"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ClientSecret" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ClientSecret" />
+                                <span asp-validation-for="ClientSecret"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                @*<nop-override-store-checkbox asp-for="Oauth2AllowIdTokenImplicitFlow_OverrideForStore" asp-input="Oauth2AllowIdTokenImplicitFlow" asp-store-scope="@Model.Oauth2AllowIdTokenImplicitFlow" />*@
+                                <nop-label asp-for="Oauth2AllowIdTokenImplicitFlow" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Oauth2AllowIdTokenImplicitFlow" />
+                                <span asp-validation-for="Oauth2AllowIdTokenImplicitFlow"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-9 offset-md-3">
+                                <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                            </div>
+                        </div>
+                    </div>
+				</div>			
+		</div>
+	</section>
+</form>

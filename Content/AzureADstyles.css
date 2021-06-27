@@ -1,0 +1,7 @@
+﻿.AzureAD-btn {
+  display: inline-block;
+  width: 100% !important;
+  height: 41px;
+  background-image: url('images/logo.png');
+  background-repeat: no-repeat;
+}

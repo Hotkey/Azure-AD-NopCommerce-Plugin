@@ -1,0 +1,11 @@
+﻿{
+  "Group": "ExternalAuth methods",
+  "FriendlyName": "AzureAD Authentication",
+  "SystemName": "ExternalAuth.AzureAD",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "Faruk ALKAYA",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.ExternalAuth.AzureAD.dll",
+  "Description": "This plugin enables AzureAD authentication (login using AzureAD account)"
+}

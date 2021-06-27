@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "";
+    Html.AddCssFileParts("~/Plugins/ExternalAuth.AzureAD/Content/AzureADstyles.css");    
+}
+<div class="AzureAD-login-block">
+    <div class="buttons">
+        <a asp-controller="AzureADAuthentication" asp-action="login" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" class="AzureAD-btn"></a>
+    </div>
+</div>
